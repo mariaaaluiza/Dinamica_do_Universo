@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/roleta.css">
+    <title>Dinâmica do Universo</title>
+</head>
+
+<body>
+    <div id="selecionar-jogadores">
+        <h2>Selecione o número de jogadores</h2>
+        <button id="joga" onclick="iniciarJogo(2)">2 Jogadores</button>
+        <button id="joga" onclick="iniciarJogo(3)">3 Jogadores</button>
+        <button id="joga" onclick="iniciarJogo(4)">4 Jogadores</button>
+    </div>
+
+
+    <div id="estatisticas" style="display: none;">
+        <div id="container-roleta">
+            <div id="roleta">
+                <div class="contorno">
+                    <div id="um">20</div>
+                    <div id="dois">Perda!</div>
+                    <div id="tres">80</div>
+                    <div id="quatro">70</div>
+                    <div id="cinco">60</div>
+                    <div id="seis">50</div>
+                    <div id="sete">40</div>
+                    <div id="oito">30</div>
+                    <button id="gire">Gire!</button>
+                </div>
+            </div>
+            <div id="container-btn-pergunta">
+                <span class="arrow"></span>
+                <button id="sortear" onclick="sortearQuestao()">Sortear Questão</button>
+            </div>
+        </div>
+
+        <div id="placar">
+            <div class="play" id="jogador1" style="display: none;"><img src="./img/af.jpg" alt="">
+                <p id="pontos"></p>
+            </div>
+            <div class="play" id="jogador2" style="display: none;"><img src="./img/af1.jpeg" alt="">
+                <p id="pontos2"></p>
+            </div>
+            <div class="play" id="jogador3" style="display: none;"><img src="./img/of.jpg" alt="">
+                <p id="pontos3"></p>
+            </div>
+            <div class="play" id="jogador4" style="display: none;"><img src="./img/of1.jpg" alt="">
+                <p id="pontos4"></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="perguntas" style="display: none;">
+        <div id="pergunta">
+            <textarea id="enunciado"></textarea>
+            <div id="resposta">
+                <select type="text" id="respostaInput" value="Ay">
+                    <option></option>
+                    <option>A</option>
+                    <option>B</option>
+                    <option>C</option>
+                    <option>D</option>
+                </select></br>
+                <button id="enviar" onclick="Corecao()">Confirmar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/roleta.js"></script>
+</body>
+
+</html>

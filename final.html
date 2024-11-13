@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ganhador</title>
+</head>
+
+<body>
+    <title>Vencedor</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-image: url("img/palcoganhador.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-family: 'Arial', sans-serif;
+        }
+
+        h1 {
+            font-size: 80px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            border: 4px solid rgba(255, 255, 255, 0.5);
+            padding: 10px;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            /* Fundo semi-transparente */
+        }
+
+        #imagemVencedor {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid white;
+            /* Borda branca para a imagem */
+            border-radius: 10px;
+            /* Bordas arredondadas */
+            overflow: hidden;
+            /* Para arredondar a imagem */
+        }
+
+        img {
+            width: 320px;
+            height: 600px;
+            object-fit: cover;
+            /* Para manter a proporção da imagem */
+            transition: transform 0.5s;
+            /* Efeito ao passar o mouse */
+        }
+
+        img:hover {
+            transform: scale(1.05);
+            /* Efeito de zoom ao passar o mouse */
+        }
+    </style>
+    </head>
+
+    <body>
+        <h1>Vencedor!</h1>
+        <img id="imagemVencedor" src="" alt="Imagem do Vencedor">
+        <script>
+            const vencedor = localStorage.getItem("vencedor");
+            const imgVencedor = document.getElementById("imagemVencedor");
+
+            if (vencedor === "Jogador 1") {
+                imgVencedor.src = "img/af.jpg";
+            } else if (vencedor === "Jogador 2") {
+                imgVencedor.src = "img/af1.jpeg";
+            } else if (vencedor === "Jogador 3") {
+                imgVencedor.src = "img/of.jpg";
+            } else if (vencedor === "Jogador 4") {
+                imgVencedor.src = "img/of1.jpg";
+            }
+            localStorage.removeItem("vencedor");
+        </script>
+    </body>
+
+</html>

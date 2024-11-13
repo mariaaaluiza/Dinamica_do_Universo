@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("../img/losa.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; 
+}
+
+h1 {
+    font-size: 160px; 
+    color: white;
+    margin-bottom: 100px; 
+    text-align: center;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5), 0 0 10px rgba(163, 202, 153, 0.8); 
+}
+
+.botao {
+    background-color: green; 
+    color: white;
+    border: solid 2px rgba(255, 255, 255, 0.7); 
+    border-radius: 30px; 
+    padding: 40px 80px; 
+    font-size: 48px; 
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s; 
+    margin: 30px; 
+}
+
+.botao:hover {
+    background-color: rgba(249, 66, 255);
+    border-color: rgb(255, 255, 255); 
+}
+
+footer {
+    margin-top: auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #333; 
+    color: white; 
+    width: 100%;
+    position: relative; 
+}
+
+footer p {
+    margin: 0; 
+    font-size: 14px; 
+}

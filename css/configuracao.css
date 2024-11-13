@@ -1,0 +1,167 @@
+:root {
+    --color-background: #f0f4f8;
+    --color-text: #333;
+    --color-primary: #4CAF50;
+    --color-primary-hover: #45a049;
+    --color-secondary: #3498db;
+    --color-secondary-hover: #2980b9;
+    --color-heading: #2C3E50;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+
+#top {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+
+.volta {
+    background-color: var(--color-primary);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.volta:hover {
+    background-color: var(--color-primary-hover);
+}
+
+.volta p {
+    margin: 0;
+}
+
+
+
+
+
+
+#cima {
+    text-align: center;
+    width: 100%;
+    max-width: 900px;
+}
+
+#cima h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: var(--color-heading);
+}
+
+
+#assuntos {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 80px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.1em;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+
+#assuntos a {
+    text-decoration: none;
+}
+
+button {
+    background-color: var(--color-secondary);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-color: #2d3e50;
+    border-radius: 15px;
+    color: #fff;
+    width: 100%;
+    max-width: 400px;
+    margin: 10px 0;
+}
+
+
+button:hover {
+    background-color: var(--color-secondary-hover);
+    transform: translateY(-4px);
+}
+
+button:active {
+    transform: translateY(2px);
+}
+
+
+button p {
+    margin: 0;
+}
+
+
+button:hover {
+    background-color: #45a049;
+    transform: translateY(-3px);
+}
+
+
+button:active {
+    transform: translateY(1px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    #cima h1 {
+        font-size: 2em;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 12px;
+    }
+}
